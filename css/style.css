@@ -257,6 +257,7 @@ a:focus {
 }
 
 /*end header section*/
+
 /* slider section */
 .slider_section {
   -webkit-box-flex: 1;
@@ -271,7 +272,47 @@ a:focus {
   text-align: center;
   background-image: url(../images/banner.jpg);
   background-repeat: no-repeat;
-  background-position: center; /* Opcional: centraliza a imagem */
+  background-position: center;
+  
+  /* Adicionando altura mínima e máxima para melhor responsividade */
+  min-height: 300px;
+  max-height: 100vh;
+  
+  /* Garantir que o conteúdo interno seja responsivo */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Media Queries para diferentes tamanhos de tela */
+@media (max-width: 1024px) {
+  .slider_section {
+    min-height: 280px;
+  }
+}
+
+@media (max-width: 768px) {
+  .slider_section {
+    min-height: 250px;
+    background-size: cover;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 600px) {
+  .slider_section {
+    min-height: 220px;
+    flex-direction: column;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .slider_section {
+    min-height: 200px;
+    background-size: contain;
+    flex-direction: column;
+    padding: 8px;
+  }
 }
 
 .slider_section #customCarousel1 {
